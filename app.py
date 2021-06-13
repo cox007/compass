@@ -73,10 +73,15 @@ def data():
                 path.insert(0, start)
                 if shortest_distance[goal] != infinity:
                     # print('Shortest distance is ' + str(shortest_distance[goal]))
-                    return str(path), str(shortest_distance[goal])
-
+                    return path, str(shortest_distance[goal])
             path, distance = dijkstra(graph, origin, destination)
-    return render_template("result.html", a = path, b= distance)
+            word = ""
+
+            for items in path:
+                word = word + " " + "→" + " " + items
+
+
+    return render_template("result.html", path = word, distance= distance, len = len(path))
 
 @app.route("/result")
 def result():
