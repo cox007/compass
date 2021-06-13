@@ -76,7 +76,7 @@ def data():
                     return str(path), str(shortest_distance[goal])
 
             path, distance = dijkstra(graph, origin, destination)
-    return render_template("result.html", a = path)
+    return render_template("result.html", a = path, b= distance)
 
 @app.route("/result")
 def result():

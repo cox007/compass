@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:powderblue;">
+<head>
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIum94pOnWOoa0didOuLiQC4CQKM8BD923kkTadMFHWo_QHCjbZtkM1V1kJcEJRsGmJL0&usqp=CAU" alt="Sahrdaya CET Logo" width="100" height="100" alt="Logo">
 <img src="https://i.pinimg.com/originals/a9/63/6d/a9636df77dacfa9a9fd8dce694c8fe47.jpg" width="100" height="100" align="right" alt="compass">
 
@@ -12,14 +15,13 @@ Sahrdaya College of Engineering & Technology&nbsp&nbsp|&nbsp&nbsp Detailed map a
 
 <form action="/form_data" method="POST"><center>
   <p><b><h3>Origin</h3></b></p>
-  <input type="text" name="origin" placeholder="Enter Origin">
+  <input class="textbox" type="text" name="origin" placeholder="Enter Origin">
     <p><b><h3>Destination</h3></b></p>
-   <input type="text" name="destination" placeholder="Enter Destination">
-   <br><br><input type="submit" name="Submit">
+   <input class="textbox" type="text" name="destination" placeholder="Enter Destination">
+   <br><br><input type="submit" class="btn" name="Submit">
   <p><h4>Click the "Submit" button to get shortest path...</h4></p>
-  <img src="https://static.wixstatic.com/media/2f31ab_08ac1e8bffdc4802be6367af6df09b3d~mv2.png/v1/fill/w_718,h_744,al_c,q_90/sahrdaya_map.webp" width="500" height="600"><br><br>
+  <img src="{{url_for('static', filename='map.jpg')}}" width="500" height="600"><br><br>
 </form>
-
 
 
 </body>
